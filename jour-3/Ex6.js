@@ -1,7 +1,7 @@
 sentence = "Hello Konexio !"
-reverseSentence = ""
+reverseSentence = [];
 
 for (i = sentence.length -1; i >= 0; i--) {
-    reverseSentence += i
+    reverseSentence.push(sentence[i])
 }
-console.log(reverseSentence)
+console.log(reverseSentence.join(""))
