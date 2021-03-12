@@ -11,4 +11,4 @@ function compare (num1,num2) {
     }
   }
 
-  compare(6,6)
+  compare(25,12)
