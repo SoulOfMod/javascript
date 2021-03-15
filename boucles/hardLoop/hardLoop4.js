@@ -1,7 +1,3 @@
-total = 0
-for (let i = 5; i <= 10; i++) {
-    total = total + i*i;
-    console.log(total)
-    
-}
+words = ["hello", "goodbye", "yes", "no", "stop", "go go go"];
 
+tabo = words.split

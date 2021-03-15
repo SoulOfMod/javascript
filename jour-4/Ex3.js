@@ -7,4 +7,4 @@ function checkIfEven (num) {
     }
   }
 
-  checkIfEven(2)
+  checkIfEven(10)

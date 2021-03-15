@@ -2,9 +2,9 @@ total = 0
 
 
 function addup (num) {
-    for (i = 0; i <= num; i++) {
+    for (i = 1; i <= num; i++) {
         total = total+i;
-        console.log(total)
+        console.log(i,total)
     }
   }
   addup(12)

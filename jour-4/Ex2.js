@@ -11,7 +11,16 @@ var cat = {
 	};
 
 
-    cats[cat,cat2]
+    cats = [cat,cat2]
 
-console.log(cat.name)
-console.log(cat2.isCute)
+	
+	console.log(cats)
+	console.log(cat.age)
+	console.log(cat["age"])
+	console.log(cats[0].age)
+	console.log(cats[0]["age"])
+
+	console.log(cat2.isCute)
+	console.log(cat2["isCute"])
+	console.log(cats[1].isCute)
+	console.log(cats[1]["isCute"])
