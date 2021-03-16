@@ -1,18 +1,13 @@
-function checkPal(palin) {
-
-    normaltab = palin.split("")
-    console.log(normaltab)
-
-    reversetab = normaltab.reverse()
-    console.log(reversetab)
-
-
-    for (i = 0; i < normaltab.length; i++) {
-        if (normaltab[i] === reversetab[normaltab.length - 1 - i]) {
-            return "Palindrome";
-        } else {
-            return "nope";
-        }
-    }
-}
-console.log(checkPal("kayak"));
+function checkPal(word) {
+    var reverse = word.split("").reverse().join("");
+    console.log(reverse);
+    
+    if (word === reverse) {
+            console.log( "Palindrome !");
+          } else {
+            console.log( "Nope !");
+          }
+      }
+    
+    
+    checkPal("kayyak");
