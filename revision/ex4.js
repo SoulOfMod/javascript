@@ -1,16 +1,15 @@
-function swap(text) {
-  text;
-  change = [];
+function swap(str) {
+  var word = [];
+  for (var i = 0; i < str.length; i++) {
 
-  for (i = 0; i < text.length; i++) {
-    if (text[i] == text[i].toLowerCase()) {
-      change[i] = text[i].toUpperCase();
-    }
-    else {
-      change[i] = text[i].toLowerCase();
-    }
-  }
-  console.log(change.join(""));
-}
+      if (str[i] == str.toLowerCase()) {
+          word[i] = str[i].toUpperCase();
+      } else {
+          word[i] = str[i].toLowerCase();
+      }
 
-swap("HAhaHAhaHAha World")
+ }
+ console.log(word.join(""));
+} 
+
+swap("HeLlo World");
