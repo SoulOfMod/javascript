@@ -1,20 +1,33 @@
-/* var prompt = require("prompt");
+var prompt = require("prompt");
+mysteryNum = Math.floor(Math.random() * 100) + 1
 
-prompt.start();  // démarre le prompt
+	prompt.start();
 
-function onErr(err) { // permet de gérer les erreurs
-  console.log(err);
-  return;
+function onErr(err) {
+	console.log(err);
+	return;
 }
 
-prompt.get(["username", "email"], function (err, res) {  // demande à obtenir les propriétés "username" et "email"
-  if (err) {
+function displayPrompt() {
+prompt.get(["userNumber"], function (err, res) {
+	if (err) {
 		return onErr(err);
 	}
 
-  console.log("Données reçues :");
-  console.log("=> Username : " + res.username); // affiche le résultat pour la propriété "username"
-  console.log("=> Email : " + res.email); // affiche le résultat pour la propriété "email"
-}); */
 
-mysteryNum = Math.floor(Math.random * 101)
+	if (res.userNumber < mysteryNum) {
+		console.log("Cherche plus grand.")
+		displayPrompt()
+	} else if (res.userNumber > mysteryNum) {
+		console.log("Cherche moins grand.")
+		displayPrompt()
+	}
+	else{
+		console.log("Bingo Genius!")
+	}
+
+
+
+})
+}
+displayPrompt()
