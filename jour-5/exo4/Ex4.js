@@ -17,4 +17,4 @@ prompt.get(["username", "email"], function (err, res) {  // demande à obtenir l
   console.log("=> Email : " + res.email); // affiche le résultat pour la propriété "email"
 }); */
 
-mysteryNum = Math.floor(Math.random* 101)
+mysteryNum = Math.floor(Math.random * 101)
