@@ -143,14 +143,15 @@ function pilotRover(string) {
 
 
 function displayPrompt() {
-    prompt.get({ pilotRover: "Pilot Rover", description: "Entrez une direction (lfr)" },
+    prompt.get(["pilot"],
 
         function (err, res) {
             if (err) {
                 return onErr(err);
             }
             else {
-                pilotRover(res.pilotRover)
+                console.log(res.pilot)
+                pilotRover(res.pilot)
             }
 
         })
