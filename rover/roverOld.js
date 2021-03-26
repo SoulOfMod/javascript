@@ -85,28 +85,65 @@ function turnRight(rover) {
 
 function moveFoward(rover) {
 
-    if (rover.direction === "N") {
+    if ((rover.x < 0 || rover.x >= 10) || (rover.y < 0 || rover.y >= 10)) {
+        console.log("Vous partez hors-limit,entré une autre direction")
 
-        rover.x++
-        console.log(rover + "Avance vers le nord")
+    } else {
+        if (rover.direction === "N") {
+
+            rover.x++
+            console.log(rover + "Avance vers le nord")
+        }
+
+        else if (rover.direction === "E") {
+
+            rover.y++
+            console.log(rover + "Avance vers l'est")
+        }
+
+        else if (rover.direction === "S") {
+
+            rover.x++
+            console.log(rover + "Avance vers le sud")
+        }
+
+        else if (rover.direction === "W") {
+
+            rover.y++
+            console.log(rover + "Avance vers l'ouest")
+        }
     }
+}
 
-    else if (rover.direction === "E") {
+function moveBackward(rover) {
 
-        rover.y++
-        console.log(rover + "Avance vers l'est")
-    }
+    if ((rover.x <= 0 || rover.x >= 10) || (rover.y < 0 || rover.y >= 10)) {
+        console.log("Vous partez hors-limit,entré une autre direction")
 
-    else if (rover.direction === "S") {
+    } else {
+        if (rover.direction === "N") {
 
-        rover.x++
-        console.log(rover + "Avance vers le sud")
-    }
+            rover.x--
+            console.log(rover + "Recule vers le nord")
+        }
 
-    else if (rover.direction === "W") {
+        else if (rover.direction === "E") {
 
-        rover.y++
-        console.log(rover + "Avance vers l'ouest'")
+            rover.y--
+            console.log(rover + "Recule vers l'est")
+        }
+
+        else if (rover.direction === "S") {
+
+            rover.x--
+            console.log(rover + "Recule vers le sud")
+        }
+
+        else if (rover.direction === "W") {
+
+            rover.y--
+            console.log(rover + "Recule vers l'ouest")
+        }
     }
 }
 
@@ -130,8 +167,13 @@ function pilotRover(string) {
             moveFoward(rover)
             rover.travelog.push([rover.x, rover.y])
             console.log(rover.travelog)
+        }
 
+        else if (string[i] === "b") {
 
+            moveBackward(rover)
+            rover.travelog.push([rover.x, rover.y])
+            console.log(rover.travelog)
         }
 
         else {
@@ -152,9 +194,10 @@ function displayPrompt() {
             else {
                 console.log(res.pilot)
                 pilotRover(res.pilot)
+                displayPrompt()
             }
 
         })
 }
-displayPrompt()
 
+displayPrompt()

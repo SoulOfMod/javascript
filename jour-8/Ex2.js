@@ -12,9 +12,9 @@ request.get(" https://api.chucknorris.io/jokes/random", function (err, res, body
 
     function getFact(norris) {
         norrisParse = JSON.parse(body)
-        norris = norrisParse.value
 
-        console.log("Random fact : " + norris)
+
+        console.log("Random fact : " + norrisParse.value)
     }
     getFact()
 
